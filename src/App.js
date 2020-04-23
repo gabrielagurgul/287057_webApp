@@ -17,7 +17,7 @@ const Main = styled.main`
 const StyledContainer = styled(Container)`
   padding-top: 32px;
   padding-bottom: 32px;
-`;
+`; 
 
 const App = () => {
   return (
