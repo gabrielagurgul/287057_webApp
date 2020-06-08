@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import {NavLink} from 'react-router-dom';
 import {ExitToApp, AccountBox} from '@material-ui/icons';
 import {AppBar, Typography, Toolbar, Button, Divider} from '@material-ui/core';
+import { withFirebase } from '../../Firebase';
+import SignOutButton from '../SignOut';
 
 const StyledTitle = styled(Typography)`
   flex-grow: 1;
@@ -10,7 +12,7 @@ const StyledTitle = styled(Typography)`
 const StyledAppBar = styled(AppBar)`
   position: relative;
   transition: width 225ms cubic-bezier(0.4, 0, 0.6, 1),
-    margin 225ms cubic-bezier(0.4, 0, 0.6, 1);
+  margin 225ms cubic-bezier(0.4, 0, 0.6, 1);
 `;
 const StyledToolbar = styled(Toolbar)`
   padding-right: 24px;
@@ -32,12 +34,12 @@ export const TopBar = () => {
     <StyledAppBar>
       <StyledToolbar>
         <Divider />
-        <StyledTitle color="inherit" noWrap>
-          {'title'}
-        </StyledTitle>
+        <StyledTitle color="inherit" noWrap/>
         <StyledButton>
+          <StyledLogoutNavlink to="/account">{'account'}</StyledLogoutNavlink>
           <AccountBox />
         </StyledButton>
+        <SignOutButton />
       </StyledToolbar>
     </StyledAppBar>
   );

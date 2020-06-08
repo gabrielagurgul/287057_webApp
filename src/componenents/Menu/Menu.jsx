@@ -13,8 +13,8 @@ const StyledDrawer = styled(Drawer)`
     position: relative;
     white-space: nowrap;
     height: 100vh;
-    width: ${(props) => (props.open ? '240px' : '72px')};
-    overflow-x: ${(props) => (props.open ? 'visible' : 'hidden')};
+    width: ${props => (props.open ? '240px' : '72px')};
+    overflow-x: ${props => (props.open ? 'visible' : 'hidden')};
     transition: width 225ms cubic-bezier(0.4, 0, 0.6, 1);
   }
 `;
